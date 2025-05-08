@@ -682,18 +682,82 @@
 
   <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-<div class="popup-urgencia">
-  <div class="popup-urgencia-content">
-    <i class="bi bi-clock-history"></i>
-    <strong>Últimas Chances!</strong>
-    <p>Aproveite agora, restam apenas</p>
-    <span id="popup-cotas-restantes">5.059</span>
-    <p>Títulos disponíveis para este sorteio.<br>Não perca a oportunidade de realizar seu sonho!<br>Viva Sorte  06/05/2025 </p>
-    <button class="btn-realizar-sonho" onclick="realizarSonho()">Comprar Agora</button>
-  </div>
-</div>
-
-<script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Criação do popup
+      const popupHTML = `
+        <div id="exitIntentPopup" class="exit-intent-popup" style="display: none;">
+          <div class="popup-container">
+            <div class="popup-content">
+              <!-- Close button -->
+              <button id="closePopupBtn" class="close-btn" aria-label="Close popup">
+                ✕
+              </button>
+    
+              <!-- Main content -->
+              <div class="text-center mb-4">
+                <div class="alert-icon">⚠️</div>
+                <div class="space-y-2">
+                  <h2 class="popup-title">
+                    Pense bem: apenas R$12,97 separam você do SEU SONHO
+                  </h2>
+                  <p class="popup-subtitle">
+                    Daqui a um ano, você estará:
+                  </p>
+                  <div class="space-y-2">
+                    <p class="popup-text-italic">
+                      "Por que não tentei?" - ainda preso nos mesmos desejos...
+                    </p>
+                    <p class="popup-text-highlight">
+                      Ou comemorando a decisão que mudou tudo.
+                    </p>
+                  </div>
+                  <p class="popup-text-bold">
+                    A escolha que define seu futuro está agora, nesta tela.
+                  </p>
+                </div>
+              </div>
+    
+              <!-- Benefits list -->
+              <div class="benefits-list">
+                <div class="benefit-item">
+                  <div class="benefit-icon">⏱️</div>
+                  <p class="benefit-text">
+                    <strong>Nº da Sorte Imediato</strong><br>
+                    Assim que você comprar, seu número já entra no sorteio AUTOMATICAMENTE!
+                  </p>
+                </div>
+                
+                <div class="benefit-item">
+                  <div class="benefit-icon">🛡️</div>
+                  <p class="benefit-text">
+                    <strong>Garantia Viva Sorte</strong><br>
+                    Se você não gostar, devolvemos seu dinheiro em 7 dias! SEM BUROCRACIA!
+                  </p>
+                </div>
+                
+                </div>
+              </div>
+    
+              <!-- Urgent offer -->
+              <div class="text-center mb-4">
+                <p class="offer-text">
+                  HOJE: 10 títulos por <span class="offer-highlight">R$12,97</span>
+                  <br>
+                  <span class="offer-small">(você economiza R$89,91!)</span>
+                </p>
+              </div>
+    
+              <!-- Action buttons -->
+              <div class="action-buttons">
+                <button id="acceptOfferBtn" class="accept-btn">
+                  QUERO MEUS NÚMEROS AGORA →
+                </button>
+                
+                <button id="declineOfferBtn" class="decline-btn">
+                  Recusar e perder essa chance
+                </button>
+              </div>
     
               <!-- Social proof -->
               <p class="social-proof">
