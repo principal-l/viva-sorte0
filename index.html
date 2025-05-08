@@ -169,104 +169,7 @@
 }
   </style>
 </head>
-<script>
-  // Função para detectar se é mobile
-  function isMobile() {
-    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  }
 
-  // Se NÃO for mobile, redireciona ou mostra mensagem
-  if (!isMobile()) {
-    // Opção 1: Redirecionar para outra página
-    window.location.href = "https://sorteioexpress.site/viva"; // ou página de erro
-
-    // Opção 2: Bloquear o conteúdo
-    // document.body.innerHTML = "<h1>Acesso permitido apenas por dispositivos móveis.</h1>";
-  }
-<script>
-  // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
-  const link = 'http://sorteioagora.site/desc/';
-
-  function setBackRedirect(url) {
-    let urlBackRedirect = url;
-    urlBackRedirect = urlBackRedirect =
-      urlBackRedirect.trim() +
-      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
-      document.location.search.replace('?', '').toString();
-
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-
-    window.addEventListener('popstate', () => {
-      console.log('onpopstate', urlBackRedirect);
-      setTimeout(() => {
-        location.href = urlBackRedirect;
-      }, 1);
-    });
-  }
-
-  setBackRedirect(link);
-</script>
-<script src="js/latest_1.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
-<script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
-  
-<script>
-  // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
-  const link = 'http://sorteioagora.site/desc/';
-
-  function setBackRedirect(url) {
-    let urlBackRedirect = url;
-    urlBackRedirect = urlBackRedirect =
-      urlBackRedirect.trim() +
-      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
-      document.location.search.replace('?', '').toString();
-
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-
-    window.addEventListener('popstate', () => {
-      console.log('onpopstate', urlBackRedirect);
-      setTimeout(() => {
-        location.href = urlBackRedirect;
-      }, 1);
-    });
-  }
-
-  setBackRedirect(link);
-</script>
-<script>
-  // Função para detectar se é mobile
-  function isMobile() {
-    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  }
-
-  // Se NÃO for mobile, redireciona ou mostra mensagem
-  if (!isMobile()) {
-    // Opção 1: Redirecionar para outra página
-    window.location.href = "https://google.com"; // ou página de erro
-
-    // Opção 2: Bloquear o conteúdo
-    // document.body.innerHTML = "<h1>Acesso permitido apenas por dispositivos móveis.</h1>";
-  }
-</script>
-</script>
-
-  <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-
-<div class="popup-urgencia">
-  <div class="popup-urgencia-content">
-    <i class="bi bi-clock-history"></i>
-    <strong>Últimas Chances!</strong>
-    <p>Aproveite agora, restam apenas</p>
-    <span id="popup-cotas-restantes">5.059</span>
-    <p>Títulos disponíveis para este sorteio.<br>Não perca a oportunidade de realizar seu sonho!<br>Viva Sorte  26/04/2025 </p>
-    <button class="btn-realizar-sonho" onclick="realizarSonho()">Comprar Agora</button>
-  </div>
-</div>
-
-<script>
 <body>
   <header class="white-header">
     <div class="logo">
@@ -656,6 +559,11 @@
         } else if (valorAtual === 100) {
           input.value = 200;
         } else if (valorAtual === 200) {
+          input.value = 400;
+        } else if (valorAtual === 400) {
+          input.value = 500;
+        } else if (valorAtual === 500) {
+          input.value = 1000;
         }
       }
       highlightButton();
@@ -774,18 +682,18 @@
 
   <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Criação do popup
-      const popupHTML = `
-        <div id="exitIntentPopup" class="exit-intent-popup" style="display: none;">
-          <div class="popup-container">
-            <div class="popup-content">
-              <!-- Close button -->
-              <button id="closePopupBtn" class="close-btn" aria-label="Close popup">
-                ✕
-              </button>
-              </div>
+<div class="popup-urgencia">
+  <div class="popup-urgencia-content">
+    <i class="bi bi-clock-history"></i>
+    <strong>Últimas Chances!</strong>
+    <p>Aproveite agora, restam apenas</p>
+    <span id="popup-cotas-restantes">5.059</span>
+    <p>Títulos disponíveis para este sorteio.<br>Não perca a oportunidade de realizar seu sonho!<br>Viva Sorte  06/05/2025 </p>
+    <button class="btn-realizar-sonho" onclick="realizarSonho()">Comprar Agora</button>
+  </div>
+</div>
+
+<script>
     
               <!-- Social proof -->
               <p class="social-proof">
